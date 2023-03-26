@@ -23,3 +23,7 @@ docker-compose run --rm php_cli bash
 #### 第19章 前準備
 
 ![Chapter 19](diagrams/chapter19.png)
+
+#### 第20章 後片付け
+
+![Chapter 20](diagrams/chapter20.png)

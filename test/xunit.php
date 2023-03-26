@@ -5,5 +5,4 @@ use Smeghead\TddCopyingXunitPhp\TestCaseTest;
 
 require_once(__DIR__ . '/../vendor/autoload.php');
 
-(new TestCaseTest('testRunning'))->run();
-(new TestCaseTest('testSetUp'))->run();
+(new TestCaseTest('testTemplateMethod'))->run();

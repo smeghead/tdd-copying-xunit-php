@@ -9,22 +9,11 @@ use Smeghead\TddCopyingXunitPhp\WasRun;
 
 class TestCaseTest extends TestCase
 {
-    private mixed $test;
-    public function setUp(): void
+    public function testTemplateMethod(): void
     {
-        $this->test = new WasRun('testMethod');
-    }
-    public function testRunning(): void
-    {
-        $this->test->run();
-        var_dump($this->test->wasRun);
-        assert($this->test->wasRun);
-    }
-    public function testSetUp(): void
-    {
-        $this->test = new WasRun('testMethod');
-        $this->test->run();
-        var_dump($this->test->wasSetUp);
-        assert($this->test->wasSetUp);
+        $test = new WasRun('testMethod');
+        $test->run();
+        var_dump($test->log);
+        assert($test->log === 'setUp testMethod tearDown ');
     }
 }

@@ -20,5 +20,9 @@ class TestCase
         $this->setUp();
         $method = new \ReflectionMethod($this, $this->name);
         $method->invoke($this);
+        $this->tearDown();
+    }
+    public function tearDown(): void
+    {
     }
 }
