@@ -20,9 +20,12 @@ class TestCase
         $result = new TestResult();
         $result->testStarted();
         $this->setUp();
-        var_dump($this);
-        $method = new \ReflectionMethod($this, $this->name);
-        $method->invoke($this);
+        try {
+            $method = new \ReflectionMethod($this, $this->name);
+            $method->invoke($this);
+        } catch (\Exception $e) {
+            $result->testFailed();
+        }
         $this->tearDown();
         return $result;
     }

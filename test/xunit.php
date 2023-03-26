@@ -5,6 +5,7 @@ use Smeghead\TddCopyingXunitPhp\TestCaseTest;
 
 require_once(__DIR__ . '/../vendor/autoload.php');
 
-(new TestCaseTest('testTemplateMethod'))->run();
-(new TestCaseTest('testResult'))->run();
-// (new TestCaseTest('testFailedResult'))->run();
+echo (new TestCaseTest('testTemplateMethod'))->run()->summary() . "\n";
+echo (new TestCaseTest('testResult'))->run()->summary() . "\n";
+echo (new TestCaseTest('testFailedResult'))->run()->summary() . "\n";
+echo (new TestCaseTest('testFailedResultFormatting'))->run()->summary() . "\n";

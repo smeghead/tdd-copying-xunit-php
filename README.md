@@ -31,3 +31,7 @@ docker-compose run --rm php_cli bash
 #### 第21章 数え上げ
 
 ![Chapter 21](diagrams/chapter21.png)
+
+#### 第22章 失敗の扱い
+
+![Chapter 22](diagrams/chapter22.png)
