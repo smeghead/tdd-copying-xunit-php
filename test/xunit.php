@@ -2,10 +2,17 @@
 declare(strict_types=1);
 
 use Smeghead\TddCopyingXunitPhp\TestCaseTest;
+use Smeghead\TddCopyingXunitPhp\TestResult;
+use Smeghead\TddCopyingXunitPhp\TestSuite;
 
 require_once(__DIR__ . '/../vendor/autoload.php');
 
-echo (new TestCaseTest('testTemplateMethod'))->run()->summary() . "\n";
-echo (new TestCaseTest('testResult'))->run()->summary() . "\n";
-echo (new TestCaseTest('testFailedResult'))->run()->summary() . "\n";
-echo (new TestCaseTest('testFailedResultFormatting'))->run()->summary() . "\n";
+$suite = new TestSuite();
+$suite->add(new TestCaseTest('testTemplateMethod'));
+$suite->add(new TestCaseTest('testResult'));
+$suite->add(new TestCaseTest('testFailedResult'));
+$suite->add(new TestCaseTest('testFailedResultFormatting'));
+$suite->add(new TestCaseTest('testSuite'));
+$result = new TestResult();
+$suite->run($result);
+echo $result->summary() . "\n";

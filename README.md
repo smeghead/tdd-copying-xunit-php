@@ -35,3 +35,7 @@ docker-compose run --rm php_cli bash
 #### 第22章 失敗の扱い
 
 ![Chapter 22](diagrams/chapter22.png)
+
+#### 第23章 スイートにまとめる
+
+![Chapter 23](diagrams/chapter23.png)
