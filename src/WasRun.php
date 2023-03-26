@@ -24,8 +24,13 @@ class WasRun extends TestCase
         $this->log .= 'testMethod ';
     }
 
+    public function testBrokenMethod(): void {
+        throw new \Exception();
+    }
+
     public function tearDown(): void
     {
         $this->log .= 'tearDown ';
     }
+
 }

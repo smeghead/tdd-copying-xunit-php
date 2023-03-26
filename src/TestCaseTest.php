@@ -16,4 +16,16 @@ class TestCaseTest extends TestCase
         var_dump($test->log);
         assert($test->log === 'setUp testMethod tearDown ');
     }
+    public function testResult(): void {
+        $test = new WasRun('testMethod');
+        $result = $test->run();
+        var_dump($result->summary());
+        assert('1 run, 0 failed' === $result->summary());
+    }
+    public function testFailedResult(): void {
+        $test = new WasRun('testBrokenMethod');
+        $result = $test->run();
+        // var_dump($result->summary());
+        assert('1 run, 1 failed' === $result->summary());
+    }
 }
