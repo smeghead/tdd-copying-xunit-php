@@ -19,3 +19,7 @@ docker-compose run --rm php_cli bash
 #### 第18章 xUnitへ向かう小さな一歩
 
 ![Chapter 18](diagrams/chapter18.png)
+
+#### 第19章 前準備
+
+![Chapter 19](diagrams/chapter19.png)

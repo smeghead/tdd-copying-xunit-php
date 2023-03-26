@@ -7,13 +7,17 @@ namespace Smeghead\TddCopyingXunitPhp;
 class TestCase
 {
     public string $name;
-    
+
     public function __construct(string $name)
     {
         $this->name = $name;
     }
+    public function setUp(): void
+    {
+    }
     public function run(): void
     {
+        $this->setUp();
         $method = new \ReflectionMethod($this, $this->name);
         $method->invoke($this);
     }
